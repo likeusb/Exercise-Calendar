@@ -33,3 +33,13 @@ const createGrid = () => {
 window.onresize = () => createGrid();
 
 createGrid();
+
+const currentMonth = new Date().getMonth();
+
+const tableRows = document.querySelectorAll('table tr');
+
+const customStyle = 'background-color: rgb(155, 5, 255);'; 
+
+if (currentMonth + 2 < tableRows.length) {
+    tableRows[currentMonth + 2].style = customStyle;
+}
